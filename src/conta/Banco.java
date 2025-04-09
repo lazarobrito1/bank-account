@@ -7,12 +7,9 @@ public class Banco {
 		conta01.abrirConta("CC");
 		conta01.fecharConta();
 		//conta01.depositar(31.80f);
-		 conta01.sacar(50);
+		conta01.sacar(50);
 		// conta01.pagarMensalidade();
-
-		System.out.println("Status da conta:" + conta01.getStatusConta());
-		System.out.println("Tipo de conta:" + conta01.getTipoCont());
-		System.out.println("Saldo da conta:" + conta01.getSaldoConta());
+		conta01.infoAccount();
 
 	}
 
