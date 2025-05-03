@@ -1,9 +1,10 @@
+                                                                        
 package conta;
 
-public class ContaCorrente extends ContaBanco {
+public class ContaPoupanca extends ContaBanco {
 
-	public ContaCorrente() { // MÉTODO CONSTRUTOR É ACIONADO SEMPRE QUE INSTANCIAR A CLASSE
-		setTipoCont("CC");
+	public ContaPoupanca() { // MÉTODO CONSTRUTOR É ACIONADO SEMPRE QUE INSTANCIAR A CLASSE
+		setTipoCont("CP");
 		setSaldoConta(0);
 	}
 
@@ -13,8 +14,8 @@ public class ContaCorrente extends ContaBanco {
 			setStatusConta(true);
 			setTipoCont(m);
 		}
-		if (getTipoCont().equals("CC")) {
-			setSaldoConta(50);
+		if (getTipoCont().equals("CP")) {
+			setSaldoConta(100);
 		}
 	}
 
@@ -56,8 +57,8 @@ public class ContaCorrente extends ContaBanco {
 	public void pagarMensalidade() {
 		int mensalidade = 0;
 		if (getStatusConta()) {
-		} else if (getTipoCont().equals("CC") && getSaldoConta() > 80) {
-			mensalidade = 80;
+		} else if (getTipoCont().equals("CP") && getSaldoConta() > 50) {
+			mensalidade = 50;
 			setSaldoConta(getSaldoConta() - mensalidade);
 			System.out.println("Mensalidade no valor de " + mensalidade + " paga");
 		} else {
